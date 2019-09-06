@@ -45,7 +45,7 @@ func makeGrpcCall(userName string) string {
 	if err != nil {
 		log.Fatalf("could not greet: %v", err)
 	}
-	msg := fmt.Sprintf("Greeting: %s", r.GetMessage())
+	msg := r.GetMessage()
 	log.Printf(msg)
 	return msg
 }
